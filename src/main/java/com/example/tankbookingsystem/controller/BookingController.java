@@ -2,11 +2,13 @@ package com.example.tankbookingsystem.controller;
 
 import com.example.tankbookingsystem.model.Booking;
 import com.example.tankbookingsystem.service.BookingService;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
@@ -26,15 +28,16 @@ public class BookingController {
 	}
 
 	@GetMapping("/{id}")
-	public ResponseEntity<Booking> getBookingById(@PathVariable String id) {
+	public ResponseEntity<Map<String,Object>> getBookingById(@PathVariable String id) {
+		Map<String, Object> result = new HashMap<>();
 		Optional<Booking> booking;
 		try {
 			booking = bookingService.getBookingById(id);
+			result.put("Booking", booking);
 		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			result.put("message", "booking with id " + id + " is not found");
 		}
-		return booking.map(ResponseEntity::ok)
-				.orElseGet(() -> ResponseEntity.notFound().build());
+		return ResponseEntity.ok(result);
 	}
 
 	@PostMapping("/save")
@@ -49,16 +52,17 @@ public class BookingController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<Booking> updateBooking(@PathVariable String id, @RequestParam String updatedBooking) {
-		Optional<Booking> booking;
+	public ResponseEntity<Map<String, Object>> updateBooking(@PathVariable String id, @RequestParam String updatedBooking) {
+		Booking booking;
+		Map<String, Object> currenMap, result = new HashMap<>();
 		try {
-			Booking booking_new = mapper.readValue(updatedBooking, Booking.class);
-			booking = bookingService.patchBooking(id, booking_new);
+			currenMap = mapper.readValue(updatedBooking, new TypeReference<>() {});
+			booking = bookingService.patchBooking(id, currenMap);
+			result.put("updated booking", booking);
 		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+			result.put("Message", e.getMessage());
 		}
-		return booking.map(ResponseEntity::ok)
-				.orElseGet(() -> ResponseEntity.notFound().build());
+		return ResponseEntity.ok(result);
 	}
 
 	@DeleteMapping("/{id}")
