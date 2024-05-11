@@ -4,13 +4,11 @@ body {
 }
 
 :root {
-  /* fonts */
   --text-small-link: Roboto;
-
-  /* font sizes */
   --text-small-link-size: 14px;
   --text-regular-semi-bold-size: 16px;
   --text-tiny-normal-size: 12px;
+
   --font-size-13xl: 32px;
   --font-size-7xl: 26px;
   --font-size-lgi: 19px;
@@ -22,7 +20,6 @@ body {
   --font-size-5xl: 24px;
   --heading-desktop-h1-size: 56px;
 
-  /* Colors */
   --background-color-primary: #fff;
   --link-primary: #000;
   --color-steelblue: #0071bc;
@@ -31,7 +28,6 @@ body {
   --color-forestgreen-200: rgba(71, 150, 15, 0.09);
   --color-neutral-neutral: #666;
 
-  /* Gaps */
   --gap-61xl: 80px;
   --gap-21xl: 40px;
   --gap-xl: 20px;
@@ -41,7 +37,6 @@ body {
   --gap-xs: 12px;
   --gap-5xs: 8px;
 
-  /* Paddings */
   --padding-61xl: 80px;
   --padding-45xl: 64px;
   --padding-13xl: 32px;
@@ -61,6 +56,5 @@ body {
   --padding-316xl: 335px;
   --padding-148xl: 167px;
 
-  /* Border radiuses */
   --br-base: 16px;
 }
