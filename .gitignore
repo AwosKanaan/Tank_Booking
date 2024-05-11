@@ -1,37 +1,21 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# OS generated files
+.DS_Store # macOS folder settings
+Thumbs.db # Windows image file cache
+Desktop.ini # Windows desktop icon settings
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# Editor directories and files
+.vscode/   # Visual Studio Code settings
+.idea/   # IntelliJ IDEA settings
+*.swp   # Vim swap files
+*.swo   # Vim swap files
+*.swn   # Vim swap files
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# Temporary or cache files
+*.tmp   # Temporary files
+*.temp  # Temporary files
+*.cache   # Cache files
+*.bak   # Backup files
 
-### VS Code ###
-.vscode/
+# Others
+*.log   # Log files
