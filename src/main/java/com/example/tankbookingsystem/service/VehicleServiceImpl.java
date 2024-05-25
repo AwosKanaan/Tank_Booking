@@ -33,6 +33,7 @@ public class VehicleServiceImpl implements VehicleService {
 			throw new Exception("Vehicle with id: " + vehicleId + " is not found.");
 		}
 	}
+	// model - > DAO -> Service -> Controller
 
 	@Override
 	public Vehicle createVehicle(Vehicle vehicle) {

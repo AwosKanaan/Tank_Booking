@@ -49,7 +49,7 @@ public class VehicleController {
 		return ResponseEntity.ok(result);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/update/{id}")
 	public ResponseEntity<Map<String, Object>> updateVehicle(@PathVariable String id, @RequestParam String updatedVehicle) {
 		Vehicle vehicle;
 		Map<String, Object> currenMap, result = new HashMap<>();

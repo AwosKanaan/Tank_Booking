@@ -1,4 +1,5 @@
 .link-one {
+  cursor: pointer;
   min-width: 76px;
   white-space: nowrap;
 }
@@ -29,7 +30,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: var(--gap-9xs);
+  gap: 4px;
 }
 .column,
 .column1 {
@@ -51,7 +52,7 @@
 }
 .logo-icon {
   height: 45px;
-  width: 122.1px;
+  width: 122px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -69,7 +70,7 @@
 .styleprimary-smalltrue-dar {
   cursor: pointer;
   border: 1px solid var(--color-yellowgreen);
-  padding: var(--padding-7xs) var(--padding-lgi);
+  padding: 6px 19px;
   background-color: var(--color-yellowgreen);
   width: 81px;
   border-radius: var(--br-base);
@@ -111,7 +112,7 @@
   border-bottom: 1px solid var(--link-primary);
   box-sizing: border-box;
   flex-direction: column;
-  padding: var(--padding-sm-5) var(--padding-45xl) var(--padding-xs);
+  padding: 14px var(--padding-45xl) var(--padding-xs);
   top: 0;
   z-index: 99;
   position: sticky;
@@ -157,7 +158,7 @@
 .button1 {
   font-size: var(--text-regular-semi-bold-size);
   font-family: var(--text-small-link);
-  color: var(--background-color-primary);
+  color: var(--color-steelblue);
   text-align: left;
   display: inline-block;
   min-width: 35px;
@@ -215,7 +216,7 @@
 .actions {
   flex-direction: row;
   align-items: flex-start;
-  padding: var(--padding-base) 0 0;
+  padding: 16px 0 0;
   gap: var(--gap-base);
 }
 .column4,
@@ -601,19 +602,6 @@
   display: inline-block;
   min-width: 40px;
 }
-.stylesecondary-smallfalse3 {
-  cursor: pointer;
-  border: 1px solid var(--color-yellowgreen);
-  padding: var(--padding-3xs) var(--padding-4xl);
-  background-color: transparent;
-  width: 88px;
-  border-radius: var(--br-base);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 .button8 {
   position: relative;
   line-height: 150%;
@@ -694,7 +682,9 @@
 .layout-408 {
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-45xl);
+}
+.container1 {
+  gap: 64px;
   text-align: left;
 }
 .layout-408 {
@@ -1296,7 +1286,7 @@
 }
 .logo-icon1 {
   width: 106px;
-  height: 39.1px;
+  height: 39px;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
@@ -1335,7 +1325,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-3xs) var(--padding-2xs);
+  padding: var(--padding-3xs) 11px;
   max-width: calc(100% - 137px);
 }
 .button12 {
@@ -1442,7 +1432,7 @@
   padding: var(--padding-5xs) 0;
 }
 .link-four {
-  width: 231.3px;
+  width: 231px;
   position: relative;
   line-height: 150%;
   display: inline-block;
@@ -1605,7 +1595,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-5xs) 104.3px var(--padding-5xs) 0;
+  padding: var(--padding-5xs) 104px var(--padding-5xs) 0;
   gap: var(--gap-xs);
 }
 .icon-instagram {
@@ -1628,7 +1618,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-5xs) 101.3px var(--padding-5xs) 0;
+  padding: var(--padding-5xs) 101px var(--padding-5xs) 0;
   gap: var(--gap-xs);
 }
 .icon-x,
@@ -1653,7 +1643,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-5xs) 121.3px var(--padding-5xs) 0;
+  padding: var(--padding-5xs) 121px var(--padding-5xs) 0;
   gap: var(--gap-xs);
 }
 .icon-linkedin {
@@ -1676,7 +1666,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-5xs) 112.3px var(--padding-5xs) 0;
+  padding: var(--padding-5xs) 112px var(--padding-5xs) 0;
   gap: var(--gap-xs);
 }
 .icon-youtube {
@@ -1699,7 +1689,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-5xs) 110.3px var(--padding-5xs) 0;
+  padding: var(--padding-5xs) 110px var(--padding-5xs) 0;
   gap: var(--gap-xs);
 }
 .social-links {
@@ -1964,7 +1954,7 @@
   }
   .layout-408 {
     gap: var(--gap-21xl);
-    padding: var(--padding-12xl) var(--padding-13xl);
+    padding: 31px var(--padding-13xl);
     box-sizing: border-box;
   }
   .heading4 {
@@ -2026,7 +2016,7 @@
   }
   .footer-1 {
     gap: var(--gap-21xl);
-    padding: var(--padding-33xl) var(--padding-13xl);
+    padding: 52px var(--padding-13xl);
     box-sizing: border-box;
   }
 }
