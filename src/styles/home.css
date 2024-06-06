@@ -533,7 +533,7 @@
   gap: var(--gap-5xl);
   color: var(--color-steelblue);
 }
-.card1,
+
 .content4 {
   box-sizing: border-box;
   display: flex;
@@ -548,14 +548,7 @@
   gap: var(--gap-13xl);
   min-width: 426px;
 }
-.card1 {
-  align-self: stretch;
-  background-color: var(--background-color-primary);
-  border: 1px solid var(--link-primary);
-  flex-direction: row;
-  justify-content: flex-start;
-  row-gap: 20px;
-}
+
 .subheading3 {
   line-height: 150%;
   font-weight: 600;
@@ -1788,18 +1781,7 @@
 .home-desktop {
   overflow: hidden;
 }
-.footer-1 {
-  align-self: stretch;
-  background-color: var(--background-color-primary);
-  padding: var(--padding-61xl) var(--padding-45xl);
-  box-sizing: border-box;
-  gap: var(--gap-61xl);
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--text-regular-semi-bold-size);
-  color: var(--link-primary);
-  font-family: var(--text-small-link);
-}
+
 .home-desktop {
   width: 100%;
   position: relative;
@@ -1826,9 +1808,6 @@
   .content4,
   .image1 {
     flex: 1;
-  }
-  .card1 {
-    flex-wrap: wrap;
   }
   .content6,
   .image2 {

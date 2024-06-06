@@ -426,7 +426,7 @@
     flex-wrap: wrap;
     gap: 80px;
 }
-.card1,
+
 .content4,
 .portfolio-list,
 .row1 {
@@ -435,11 +435,7 @@
     justify-content: flex-start;
     max-width: 100%;
 }
-.card1 {
-    flex: 1;
-    flex-direction: column;
-    gap: 24px;
-}
+
 .portfolio-list,
 .row1 {
     align-self: stretch;
@@ -501,7 +497,7 @@
     text-align: center;
     font-size: 16px;
     color: #000;
-    font-family: Roboto;
+    font-family: Roboto, serif;
 }
 .tagline {
     position: relative;
@@ -509,6 +505,7 @@
     font-weight: 600;
     display: inline-block;
     min-width: 50px;
+    width: 100%;
 }
 .tagline-wrapper {
     align-self: stretch;
@@ -667,7 +664,6 @@
     display: inline-block;
     min-width: 124px;
     flex-shrink: 0;
-    debug_commit: 1de1738;
 }
 .selectedfalse,
 .selectedfalse-wrapper {
@@ -1262,18 +1258,7 @@
 .footer-1 {
     overflow: hidden;
 }
-.footer-1 {
-    align-self: stretch;
-    background-color: #fff;
-    padding: 80px 64px;
-    box-sizing: border-box;
-    gap: 80px;
-    max-width: 100%;
-    text-align: left;
-    font-size: 16px;
-    color: #000;
-    font-family: Roboto;
-}
+
 .booking-page-desktop {
     width: 100%;
     position: relative;

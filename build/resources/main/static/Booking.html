@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
+    <link rel="stylesheet" href="../../../styles/global.css">
     <link rel="stylesheet" href="../../../styles/Booking.css" />
     <link
             rel="stylesheet"
@@ -11,6 +11,33 @@
     />
     <title></title>
     <script src="../../../Javascript/booking.js"></script>
+    <script>
+        async function fetchVehicleData(vehicleId) {
+            try {
+                const response = await fetch(`/http:localhost:8080//vehicles/${vehicleId}`);
+                if (response.ok) {
+                    const vehicleData = await response.json();
+                    const phoneNumber = vehicleData.Vehicle.phoneNumber;
+                    window.location.href = `/order.html?phone=${phoneNumber}`;
+                } else {
+                    console.error('Failed to fetch vehicle data');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        function handleOrderButtonClick(event) {
+            const vehicleId = event.target.dataset.vehicleId;
+            fetchVehicleData(vehicleId);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.order-button').forEach(button => {
+                button.addEventListener('click', handleOrderButtonClick);
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="booking-page-desktop">
@@ -62,17 +89,9 @@
                         <div class="content2">
                             <div class="content3">
                                 <b class="heading1">Tank Name</b>
-                                <div class="tags">
-                                    <div class="tag">
-                                        <div class="tag-one">Size</div>
-                                    </div>
-                                    <div class="tag1">
-                                        <div class="tag-two">Price</div>
-                                    </div>
-                                    <div class="tag2">
-                                        <div class="tag-three">Availability</div>
-                                    </div>
-                                </div>
+                                <button class="stylesecondary-smallfalse1" onclick="">
+                                    <div class="button3">Order this tank</div>
+                                </button>
                             </div>
                             <div class="column3">
                                 <div class="text1">
@@ -84,7 +103,7 @@
                     </div>
                 </div>
                 <div class="row1">
-                    <div class="card1">
+                    <div class="card">
                         <img
                                 class="placeholder-image-icon1"
                                 alt=""
@@ -115,9 +134,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="stylesecondary-smallfalse">
-                <div class="button1">View all</div>
             </div>
         </div>
     </div>

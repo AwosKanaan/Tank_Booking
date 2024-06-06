@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         chevronIcon.classList.toggle('rotate');
     });
 
-    // Handle accordion functionality in FAQ section
     const accordionItems = document.querySelectorAll('.accordion-item, .accordion-item1, .accordion-item2, .accordion-item3, .accordion-item4');
 
     accordionItems.forEach((item) => {
@@ -25,9 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle subscription form validation
         const subscribeButton = document.querySelector('#login');
     const emailInput = document.querySelector('.typedefault input');
+
+    // const startButton = document.querySelector('.styleprimary-smallfalse-da');
+    // startButton.addEventListener('click', (event) => {
+    //     event.preventDefault();
+    //     location.href =
+    // })
 
     subscribeButton.addEventListener('click', (event) => {
         event.preventDefault();

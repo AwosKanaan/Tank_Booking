@@ -23,6 +23,13 @@ public class VehicleController {
 		this.mapper = mapper;
 	}
 
+	@GetMapping("getAll")
+	public ResponseEntity<Map<String, Object>> getAllVehicles() {
+		Map<String, Object> result = new HashMap<>();
+		result.put("vehicles", vehicleService.getAllVehicles());
+		return ResponseEntity.ok(result);
+	}
+
 	@GetMapping("/{id}")
 	public ResponseEntity<Map<String, Object>> getVehicleById(@PathVariable String id) {
 		Map<String, Object> result = new HashMap<>();
@@ -63,7 +70,7 @@ public class VehicleController {
 		return ResponseEntity.ok(result);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Map<String, Object>> deleteVehicle(@PathVariable String id) {
 		Map<String, Object> result = new HashMap<>();
 		try{

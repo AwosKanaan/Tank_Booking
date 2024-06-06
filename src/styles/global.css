@@ -86,3 +86,16 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.footer-1 {
+  align-self: stretch;
+  background-color: var(--background-color-primary);
+  padding: var(--padding-61xl) var(--padding-45xl);
+  box-sizing: border-box;
+  gap: var(--gap-61xl);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--text-regular-semi-bold-size);
+  color: var(--link-primary);
+  font-family: var(--text-small-link);
+}

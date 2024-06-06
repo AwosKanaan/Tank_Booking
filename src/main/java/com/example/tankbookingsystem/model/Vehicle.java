@@ -14,4 +14,5 @@ public class Vehicle {
 	private final String model;
 	private final boolean availability;
 	private int capacity;
+	private String phoneNumber;
 }
