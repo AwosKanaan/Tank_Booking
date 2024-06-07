@@ -49,7 +49,7 @@ public class VehicleController {
 		Vehicle vehicle;
 		try {
 			vehicle = vehicleService.createVehicle(newVehicle);
-			result.put("Vehicle", vehicle);
+			result.put("Vehicle1", vehicle);
 		} catch (Exception e) {
 			result.put("Message", "Failed to create vehicle due to " + e.getMessage());
 		}

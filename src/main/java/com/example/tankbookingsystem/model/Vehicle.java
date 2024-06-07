@@ -12,7 +12,7 @@ public class Vehicle {
 	private final String id;
 	private final String vehicleId;
 	private final String model;
-	private final boolean availability;
+	private boolean availability;
 	private int capacity;
 	private String phoneNumber;
 }

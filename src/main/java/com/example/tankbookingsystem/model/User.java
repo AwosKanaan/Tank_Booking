@@ -11,8 +11,8 @@ public class User {
 	@Id
 	private final String id;
 	private final String userId;
-	private final String userName;
-	private final String password;
-	private final String email;
-	private final String phoneNumber;
+	private String userName;
+	private String password;
+	private String email;
+	private String phoneNumber;
 }

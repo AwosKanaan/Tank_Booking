@@ -11,33 +11,6 @@
     />
     <title></title>
     <script src="../../../Javascript/booking.js"></script>
-    <script>
-        async function fetchVehicleData(vehicleId) {
-            try {
-                const response = await fetch(`/http:localhost:8080//vehicles/${vehicleId}`);
-                if (response.ok) {
-                    const vehicleData = await response.json();
-                    const phoneNumber = vehicleData.Vehicle.phoneNumber;
-                    window.location.href = `/order.html?phone=${phoneNumber}`;
-                } else {
-                    console.error('Failed to fetch vehicle data');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-
-        function handleOrderButtonClick(event) {
-            const vehicleId = event.target.dataset.vehicleId;
-            fetchVehicleData(vehicleId);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.order-button').forEach(button => {
-                button.addEventListener('click', handleOrderButtonClick);
-            });
-        });
-    </script>
 </head>
 <body>
 <div class="booking-page-desktop">
@@ -83,13 +56,13 @@
                         <img
                                 class="placeholder-image-icon"
                                 alt=""
-                                src="../../../../public/placeholder-image@2x.png"
+                                src="../../../../public/Tank2.jpeg"
                         />
 
                         <div class="content2">
                             <div class="content3">
                                 <b class="heading1">Tank Name</b>
-                                <button class="stylesecondary-smallfalse1" onclick="">
+                                <button class="stylesecondary-smallfalse1">
                                     <div class="button3">Order this tank</div>
                                 </button>
                             </div>
@@ -107,7 +80,7 @@
                         <img
                                 class="placeholder-image-icon1"
                                 alt=""
-                                src="../../../../public/placeholder-image-1@2x.png"
+                                src="../../../../public/WhatsApp%20Image%202024-06-06%20at%2012.19.37.jpeg"
                         />
 
                         <div class="content4">
